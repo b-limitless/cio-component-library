@@ -30,6 +30,7 @@ export default [
         // extract: false,
         // modules: true,
         // use: ['sass'],
+        modules: true
       }),
       // scss(),
       terser(),
