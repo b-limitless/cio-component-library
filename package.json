@@ -7,7 +7,10 @@
     "pub": "npm publish --access public",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "clean": "del-cli ./dist/*"
+    "clean": "del-cli ./dist/*", 
+    "publish:major": "npm version $(semver $npm_package_version -i major) && npm publish --tag latest",
+    "publish:minor": "npm version $(semver $npm_package_version -i minor) && npm publish --tag latest",
+    "publish:patch": "npm version $(semver $npm_package_version -i patch) && npm publish --tag latest"
   },
   "author": "",
   "license": "ISC",
@@ -42,6 +45,7 @@
     "rollup-plugin-scss": "^3.0.0",
     "sass": "^1.63.4",
     "sass-loader": "^13.3.2",
+    "semver": "^6.3.0",
     "storybook": "^7.0.21",
     "style-loader": "^3.3.3",
     "tslib": "^2.5.3",
