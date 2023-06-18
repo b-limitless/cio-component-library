@@ -8,7 +8,8 @@ type Props = {
     setStep: Function;
     step: forStepType;
     nextStepHandler: Function;
-    lastStep: boolean
+    lastStep: boolean, 
+    [x:string]:any
 }
 
 export default function FormTemplate({ children, step, nextStepHandler, lastStep }: Props) {
