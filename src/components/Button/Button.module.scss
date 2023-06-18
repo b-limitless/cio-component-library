@@ -1,4 +1,7 @@
-@import "../../styles/base/variables";
+@import "../../styles/abstract/variables";
+@import "../../styles/base/base";
+@import "../../styles/base/pxToRem";
+
 .btn {
     color: blue;
     font-size: $font-size;

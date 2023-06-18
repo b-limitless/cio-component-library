@@ -11,7 +11,7 @@
     "publish:major": "npm version $(semver $npm_package_version -i major) && npm publish --access public --tag latest",
     "publish:minor": "npm version $(semver $npm_package_version -i minor) && npm publish --access public --tag latest",
     "publish:patch": "npm version $(semver $npm_package_version -i patch) && npm publish --access public --tag latest",
-    "cr": "npm run clean && npm run rollup"
+    "cr": "npm run clean && git add . && git commit -m 'update' && npm run rollup"
   },
   "author": "",
   "license": "ISC",
