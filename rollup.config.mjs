@@ -27,10 +27,11 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        extract: false,
-        modules: true,
-        use: ['sass'],
+        // extract: false,
+        // modules: true,
+        // use: ['sass'],
       }),
+      scss(),
       terser(),
       
     ],
@@ -39,6 +40,6 @@ export default [
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts.default()],
-    external: [/\.css$/],
+    external: [/\.(css|less|scss)$/]
   },
 ];
