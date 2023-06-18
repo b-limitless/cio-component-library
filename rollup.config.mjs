@@ -31,7 +31,7 @@ export default [
         // modules: true,
         // use: ['sass'],
       }),
-      scss(),
+      // scss(),
       terser(),
       
     ],
