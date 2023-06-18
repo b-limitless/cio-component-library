@@ -44,7 +44,8 @@ const styles = (variant: variantType) => {
 
 export interface ButtonInterface {
     variant: variantType;
-    text: string
+    text: string, 
+    [x:string]:any
 }
 
 const Button: React.FC<ButtonInterface> = ({ text, variant, ...rest }) => {
