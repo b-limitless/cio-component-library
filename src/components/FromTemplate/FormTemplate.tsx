@@ -1,4 +1,4 @@
-import { Button } from 'components/ComponentsApp';
+import Button  from "../Button";
 import React, { ReactNode } from "react";
 import { forStepType } from "./form-template.types";
 import styles from "./add-febric.module.scss";

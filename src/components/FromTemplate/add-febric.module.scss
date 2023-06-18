@@ -1,5 +1,5 @@
-@import "@pasal/common-style/styles/base/functions.scss";
-@import "@pasal/common-style/styles/abstract/variables.scss";
+@import "../../styles/base/functions.scss";
+@import "../../styles/abstract/variables.scss";
 
 .addfebric__container {
   width: calc(100vw - $sidebar-width);
