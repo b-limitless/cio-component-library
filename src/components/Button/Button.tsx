@@ -52,9 +52,6 @@ const Button: React.FC<ButtonInterface> = ({ text, variant, ...rest }) => {
     return (<MButton sx={styles(variant)} {...rest}>{text}</MButton>)
 }
 
-// const Button: React.FC<ButtonInterface> = ({ text, variant, ...rest }) => {
-//     return <button>Hello World</button>
-// }
 export default Button;
 
 
