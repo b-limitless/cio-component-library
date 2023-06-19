@@ -38,7 +38,6 @@
     "del-cli": "^5.0.0",
     "prop-types": "^15.8.1",
     "react": "*",
-    "react-dom": "^18.2.0",
     "rollup": "^3.25.1",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-postcss": "^4.0.2",
