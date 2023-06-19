@@ -36,6 +36,14 @@ export default [
       terser(),
       
     ],
+    external: [
+      "react",
+      "react-dom",
+      "@mui/material",
+      "@emotion/react",
+      "@emotion/styled"
+    ],
+    
   },
   {
     input: "dist/esm/types/index.d.ts",
