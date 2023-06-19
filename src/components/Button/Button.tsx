@@ -3,7 +3,7 @@ import React from 'react';
 // import { colors } from '../../config/colors';
 
 
-// export type variantType = "primary" | "secondary" | "light";
+export type variantType = "primary" | "secondary" | "light";
 
 // const styles = (variant: variantType) => {
 //     let background = variant === 'primary' ? colors.primary 
@@ -42,17 +42,17 @@ import React from 'react';
 //     }
 // }
 
-// export interface ButtonInterface {
-//     variant: variantType;
-//     text: string, 
-//     [x:string]:any
-// }
+export interface ButtonInterface {
+    variant: variantType;
+    text: string, 
+    [x:string]:any
+}
 
 // const Button: React.FC<ButtonInterface> = ({ text, variant, ...rest }) => {
 //     return (<MButton sx={styles(variant)} {...rest}>{text}</MButton>)
 // }
 
-const Button = () => {
+const Button: React.FC<ButtonInterface> = ({ text, variant, ...rest }) => {
     return <button>Hello World</button>
 }
 export default Button;
