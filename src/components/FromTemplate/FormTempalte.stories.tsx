@@ -8,7 +8,7 @@ export default {
     argTypes: {handleClick: {action: 'handleClick'}}
 }
 
-const Template = (args:any) => <FormTemplate {...args} />
+const Template = (args:any) => <FormTemplate {...args} ><h1>Hello World</h1></FormTemplate>
 
 export const Steps:any =  Template.bind({});
 
