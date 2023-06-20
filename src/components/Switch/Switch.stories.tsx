@@ -1,14 +1,14 @@
 import React from 'react';
-import Checkbox from './Switch';
+import Switch from './Switch';
 
 
 export default {
-    title: "Components/v1/Checkbox",
-    component: Checkbox,
+    title: "Components/v1/Switch",
+    component: Switch,
     argTypes: {handleClick: {action: 'handleClick'}}
 }
 
-const Template = (args:any) => <Checkbox {...args} />
+const Template = (args:any) => <Switch {...args} />
 
 
 export const Green:any = Template.bind({});
