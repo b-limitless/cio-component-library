@@ -20,7 +20,7 @@ Red.args = {
 export const Green:any = Template.bind({});
 
 Green.args = {
-    children: 'green',
+    backgroundColor: 'green',
     label: 'press me', 
     size: 'md'
 }
