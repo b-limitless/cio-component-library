@@ -10,16 +10,17 @@ interface SimpleAccordionInterface {
     children: React.ReactNode;
     title: string;
     id: string;
+    ariaControls: string;
 }
 
 
-export default function SimpleAccordion({ children, title, id }: SimpleAccordionInterface) {
+export default function SimpleAccordion({ children, title, id, ariaControls }: SimpleAccordionInterface) {
     return (
 
         <Accordion>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
+                aria-controls={ariaControls}
                 id={id}
             >
                 <Typography sx={defaultFont}>{title}</Typography>
