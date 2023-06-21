@@ -9,16 +9,17 @@ type Props = {
     step: forStepType;
     nextStepHandler: Function;
     lastStep: boolean, 
+    title?: string;
     [x:string]:any
 }
 
-export default function FormTemplate({ children, step, nextStepHandler, lastStep }: Props) {
+export default function FormTemplate({ children, step, nextStepHandler, lastStep, title }: Props) {
 
     return (
         <div className={styles.addfebric__container}>
             <div className={styles.form__container}>
                 <div className={styles.row}>
-                    <div className={styles.title}>Proudct - Febric - Add {step}</div>
+                    <div className={styles.title}>{title} - {step}</div>
                 </div>
                 <div className={styles.form__section}>
                     {children}
