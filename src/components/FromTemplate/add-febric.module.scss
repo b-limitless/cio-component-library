@@ -7,6 +7,10 @@
   display: flex;
   justify-content: center;
 
+  @media only screen and (max-width:$bp-700) {
+    width: 100%;
+  }
+
   .form__container {
     max-width: pxToRem(1084);
     width: 100%;
@@ -17,6 +21,10 @@
       background-color: $light;
       padding: pxToRem(48);
       overflow: hidden;
+
+      @media only screen and (max-width:$bp-700) {
+        width: 8px;
+      }
     }
 
     .row {
