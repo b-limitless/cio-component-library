@@ -8,7 +8,7 @@
   justify-content: center;
 
   @media only screen and (max-width:$bp-700) {
-    width: 100%;
+    width: 100vw
   }
 
   .form__container {
@@ -23,7 +23,8 @@
       overflow: hidden;
 
       @media only screen and (max-width:$bp-700) {
-        width: 8px;
+        width: calc(100w - 8px);
+        padding: pxToRem(8);
       }
     }
 
