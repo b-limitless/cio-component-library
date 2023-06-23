@@ -8,7 +8,9 @@
   justify-content: center;
 
   @media only screen and (max-width:$bp-700) {
-    width: 100vw
+    width: 100vw;
+    height: auto;
+    overflow: auto;
   }
 
   .form__container {
