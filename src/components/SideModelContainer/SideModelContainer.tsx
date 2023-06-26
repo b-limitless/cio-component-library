@@ -6,7 +6,7 @@ import { svgCDNAssets } from '../../config/assets';
 
 export interface SideModeInterface {
   children: React.ReactNode;
-  showModel: boolean;
+  showModel: boolean | number | string;
   setShowModel: Function;
 
 }

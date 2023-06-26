@@ -12,9 +12,10 @@ export interface DataTableInterface {
   tableTitle: string;
   showToLeftButton: boolean;
   test?:boolean;
+  setShowModel?:Function; 
 }
 
-export default function Febric({ tableTitle, tableHeader, tableData, setShowSelectRowId, showDetailReactNode, showToLeftButton, test }: DataTableInterface) {
+export default function Febric({setShowModel, tableTitle, tableHeader, tableData, setShowSelectRowId, showDetailReactNode, showToLeftButton, test }: DataTableInterface) {
   // Loading the febrics for the  users
   const customStyle = {
     cursor: "pointer"
@@ -22,8 +23,8 @@ export default function Febric({ tableTitle, tableHeader, tableData, setShowSele
 
 
   const showModelHandler = (i: number) => {
-    if (!setShowSelectRowId) return;
-    return setShowSelectRowId(i);
+    if (!setShowModel) return;
+    return setShowModel(i);
     
   }
 
