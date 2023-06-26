@@ -10,6 +10,7 @@ export { default as Select } from "./Select";
 export { default as BasicTable } from "./Table";
 export { CheckboxWithLabel } from "./Checkbox/Checkbox";
 export {default as DataTable} from "./DataTable";
+export {default as Chip} from "./Chip";
 export * from "./Input";
 // Exporting types and enums which might need to use
 export * from "./FromTemplate/form-template.types";

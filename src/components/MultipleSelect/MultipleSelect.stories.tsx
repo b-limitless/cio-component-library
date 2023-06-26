@@ -2,7 +2,7 @@ import React from 'react';
 import Chip from './MultipleSelect';
 
 export default {
-    title: "Components/v1/Chip",
+    title: "Components/v1/MultipleSelect",
     component: Chip,
     argTypes: { handleClick: { action: 'handleClick' } }
 }
