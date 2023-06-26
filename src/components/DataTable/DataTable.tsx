@@ -23,7 +23,7 @@ export default function Febric({setShowModel, tableTitle, tableHeader, tableData
 
 
   const showModelHandler = (i: number) => {
-    if (!setShowModel) return;
+    if (setShowModel === undefined) return;
     return setShowModel(i);
     
   }
