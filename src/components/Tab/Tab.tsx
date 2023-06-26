@@ -43,8 +43,8 @@ export interface typeTabICO   {
     [x:string]:any
 }
 
-export const TabICO = ({label} : typeTabICO) => {
-    return <Tab sx={defaultFont} label={label} {...a11yProps(0)} />
+export const TabICO = ({label, ...rest} : typeTabICO) => {
+    return <Tab sx={defaultFont} label={label} {...rest} />
 }
 
 export default function BasicTabs() {
