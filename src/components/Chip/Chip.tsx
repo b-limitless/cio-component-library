@@ -7,7 +7,7 @@ type colors = 'green' | 'skyblue' | 'lightbrown' | 'lightred';
 
 export interface ChipInterface {
   label: string;
-  variant: OverridableStringUnion<'outlined', ChipProps['variant']>;
+  variant?: OverridableStringUnion<'outlined', ChipProps['variant']>;
   chipVariant: colors
 }
 
