@@ -11,6 +11,8 @@ export { default as BasicTable } from "./Table";
 export { CheckboxWithLabel } from "./Checkbox/Checkbox";
 export {default as DataTable} from "./DataTable";
 export {default as Chip} from "./Chip";
+export {default as SideModel} from "./SideModelContainer";
+export * from "./Tab";
 export * from "./Input";
 // Exporting types and enums which might need to use
 export * from "./FromTemplate/form-template.types";
