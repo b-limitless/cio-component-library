@@ -1,5 +1,5 @@
 import React from 'react';
-import Chip from './Chip';
+import Chip from './MultipleSelect';
 
 export default {
     title: "Components/v1/Chip",

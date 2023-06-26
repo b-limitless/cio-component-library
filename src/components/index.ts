@@ -4,7 +4,7 @@ export { default as BasicSwitch } from "./Switch";
 export { default as BasicAccordion } from "./Accordion";
 export { default as Message } from "./Messages";
 export { default as Checkbox } from "./Checkbox";
-export { default as Chip } from "./Chip";
+export { default as MultipleSelect } from "./MultipleSelect";
 export { default as TextArea } from "./Textarea";
 export { default as Select } from "./Select";
 export { default as BasicTable } from "./Table";
