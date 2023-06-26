@@ -3,25 +3,18 @@
 $model_width: 562px;
 
 .model.show {
-    
     right: 0;
-    
 }
 .model.hide {
-    // display: none;
     right: -($model_width);
-    // position: absolute;
 }
-
 .model {
     top: 0;
     width: $model_width;
     height: 100vh;
     position: fixed;
     transition: all 0.2s ease-out;
-    // right: -562px;
     box-shadow: -12px 0px 15px -3px rgba(0,0,0,0.1);
-    
     background-color: #fff;
     .model__side {
         .close {
@@ -35,4 +28,3 @@ $model_width: 562px;
         }
     }
 }
-

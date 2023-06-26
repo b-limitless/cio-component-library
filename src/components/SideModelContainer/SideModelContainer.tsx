@@ -11,13 +11,12 @@ export interface SideModeInterface {
 
 }
 
-export default function SideModel({ children, showModel, setShowModel }: SideModeInterface) {
+export default function SideModel({ children, showModel, setShowModel, loading }: SideModeInterface) {
   return (
     <div className={`${styles.model} ${showModel ? styles.show : styles.hide}`}>
       <div className={styles.model__side}>
         <div className={styles.close}>
             <img src={svgCDNAssets.crossIcon} alt=""  onClick={() => setShowModel(false)}/>
-         
         </div>
         {children}
       </div>
