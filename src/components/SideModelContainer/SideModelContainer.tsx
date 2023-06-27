@@ -8,10 +8,11 @@ export interface SideModeInterface {
   children: React.ReactNode;
   showModel: boolean | number | string;
   setShowModel: Function;
+  
 
 }
 
-export default function SideModel({ children, showModel, setShowModel, loading }: SideModeInterface) {
+export default function SideModel({ children, showModel, setShowModel }: SideModeInterface) {
   return (
     <div className={`${styles.model} ${showModel ? styles.show : styles.hide}`}>
       <div className={styles.model__side}>
