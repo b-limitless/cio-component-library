@@ -17,6 +17,7 @@ export const pngCDNAssetsURIs = {
     successCheck: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1686557298/fxrmxjkkd4eb5mqhchdw.svg", 
     search: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687858350/wg9zurieyi1mfymwmont.svg",
     cuff: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687863835/sjrtnqnd7vpd3wbtb6rz.svg",
-    collor: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687863831/wwg63mebce6szzoseoj9.svg"
+    collor: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687863831/wwg63mebce6szzoseoj9.svg",
+    test: "test"
   };
   
