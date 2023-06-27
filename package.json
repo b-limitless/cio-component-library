@@ -1,6 +1,6 @@
 {
   "name": "@pasal/cio-component-library",
-  "version": "32.0.0",
+  "version": "33.0.0",
   "description": "",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
@@ -11,7 +11,7 @@
     "publish:major": "npm version $(semver $npm_package_version -i major) && npm publish --access public --tag latest --no-email",
     "publish:minor": "npm version $(semver $npm_package_version -i minor) && npm publish --access public --tag latest --no-email",
     "publish:patch": "npm version $(semver $npm_package_version -i patch) && npm publish --access public --tag latest --no-email",
-    "cr": "npm run clean && git add . && git commit -m \"$message\" && npm run rollup", 
+    "cr": "npm run clean && git add . && git commit -m \"$message\" && npm run rollup",
     "final": "message=\"$message\" npm run cr && npm run publish:major"
   },
   "author": "",
