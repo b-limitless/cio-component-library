@@ -14,5 +14,6 @@ const Template = (args:any) => <TextArea {...args} />
 export const Green:any = Template.bind({});
 
 Green.args = {
-    label: "Hello World"
+    label: "Hello World", 
+    placeholder: "hello world"
 }
