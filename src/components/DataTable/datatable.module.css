@@ -1,0 +1,87 @@
+.febric__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.febric__wrapper .febric__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .febric__wrapper .febric__container {
+    width: 100vw;
+  }
+}
+
+.febric__wrapper .febric__container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .febric__wrapper .febric__container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    row-gap: 1rem;
+  }
+}
+
+.febric__wrapper .febric__container .row .title {
+  margin-right: auto;
+  font-family: "Figtree", sans-serif;
+}
+
+.febric__wrapper .febric__container .row .table__container {
+  width: 100%;
+}
+
+.febric__wrapper .febric__container .row .table__container .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem 0;
+  font-family: "Figtree", sans-serif;
+}
+
+.febric__wrapper .febric__container .row .table__container .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem 0;
+  font-family: "Figtree", sans-serif;
+}
+/*# sourceMappingURL=datatable.module.css.map */

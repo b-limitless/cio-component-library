@@ -1,0 +1,35 @@
+.model.show {
+  right: 0;
+}
+
+.model.hide {
+  right: -562px;
+}
+
+.model {
+  top: 0;
+  width: 562px;
+  height: 100vh;
+  position: fixed;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-box-shadow: -12px 0px 15px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: -12px 0px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.model .model__side .close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px 28px;
+  margin-left: auto;
+}
+
+.model .model__side .close svg {
+  cursor: pointer;
+}
+/*# sourceMappingURL=side-model-container.module.css.map */

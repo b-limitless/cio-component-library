@@ -1,0 +1,25 @@
+.cio-input-with-toggle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cio-input-with-toggle .input-icon {
+  position: absolute;
+  right: 25px;
+  top: calc(49% - 17.73px / 2);
+  cursor: pointer;
+  font-family: "Figtree", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+/*# sourceMappingURL=input-icon.css.map */

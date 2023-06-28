@@ -1,0 +1,55 @@
+.base {
+  max-width: 651px;
+  margin: auto;
+  background-color: #ffffff;
+  width: 100%;
+  font-family: "Figtree", sans-serif;
+}
+
+.order__completed {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order__completed * {
+  font-family: "Figtree", sans-serif;
+}
+
+.order__completed .bold__message {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: #1a1a1c;
+  margin-top: 30px;
+}
+
+.order__completed .confirmation {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #848484;
+}
+
+.order__completed button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 34px;
+}
+/*# sourceMappingURL=message.module.css.map */

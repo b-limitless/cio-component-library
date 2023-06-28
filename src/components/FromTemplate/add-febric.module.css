@@ -1,0 +1,221 @@
+.addfebric__container {
+  width: calc(100vw - $sidebar-width);
+  height: calc(100vh - 1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .addfebric__container {
+    width: 100vw;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+.addfebric__container .form__container {
+  max-width: calc($px / 16)rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+
+.addfebric__container .form__container .form__section {
+  background-color: #fff;
+  padding: calc($px / 16)rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .addfebric__container .form__container .form__section {
+    width: calc(100w - 8px);
+    padding: calc($px / 16)rem;
+  }
+}
+
+.addfebric__container .form__container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: calc(33px);
+  width: 100%;
+}
+
+.addfebric__container .form__container .row .title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 150%;
+  /* or 42px */
+  font-family: "Figtree", sans-serif;
+  /* Dark-1 */
+  color: #1a1a1c;
+}
+
+.addfebric__container .form__container .row .form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  max-height: calc($px / 16)rem;
+  overflow: auto;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.addfebric__container .form__container .row .form__row .characters__label {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -ms-grid-columns: (calc($px / 16)rem)[auto-fill];
+      grid-template-columns: repeat(auto-fill, calc($px / 16)rem);
+}
+
+.addfebric__container .form__container .row .form__row .febric__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.addfebric__container .form__container .row .form__row .febric__media .febric__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  background-color: #efbb40;
+  padding: 19px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+}
+
+.addfebric__container .form__container .row .form__row .febric__media .febric__image span:nth-child(2) {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.addfebric__container .form__container .row .form__row .compositions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+
+.addfebric__container .form__container .row .form__row .compositions .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.addfebric__container .form__container .row .form__row .compositions .item .col {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.addfebric__container .form__container .row .form__row .compositions .item .col .title {
+  font-size: 1rem;
+  font-family: "Figtree", sans-serif;
+}
+
+.addfebric__container .form__container .row .form__row .compositions .item .psersantage {
+  margin-right: auto;
+}
+
+.addfebric__container .form__container .button__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: calc(49px - 1rem);
+}
+
+.form__row > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.childrens {
+  -webkit-animation: example 1s;
+          animation: example 1s;
+  min-height: 200px;
+}
+
+@-webkit-keyframes rightToLeft {
+  0% {
+    display: none;
+  }
+  100% {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    display: none;
+  }
+  100% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@-webkit-keyframes example {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes example {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+/*# sourceMappingURL=add-febric.module.css.map */
