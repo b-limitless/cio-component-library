@@ -18,6 +18,7 @@ export const baseStyles = {
 
 
 export const style = {
+  
   input: {
     ...baseStyles,
     padding: "16px 12px",

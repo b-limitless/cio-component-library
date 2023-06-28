@@ -12,6 +12,8 @@ export { CheckboxWithLabel } from "./Checkbox/Checkbox";
 export {default as DataTable} from "./DataTable";
 export {default as Chip} from "./Chip";
 export {default as SideModel} from "./SideModelContainer";
+export {default as SelectWithAvatar} from "./SelectWithAvatar";
+export {default as DatePicker} from "./DatePicker";
 export * from "./Tab";
 export * from "./Input";
 // Exporting types and enums which might need to use
