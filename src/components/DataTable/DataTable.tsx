@@ -1,6 +1,22 @@
-import React, { ReactNode } from "react";
-import { BasicTable, Button } from "../";
+import React, { ReactNode, useState } from "react";
+import { BasicTable, Button, MultipleSelectWithCheckBox } from "../";
 import styles from "./datatable.module.scss";
+import { SelectChangeEvent } from '@mui/material/Select';
+
+
+const filterData = [
+  {
+    label: "Order Status",
+    data: ["Hari", "Hurican", "Nighmare", "Skull"],
+    id: "orderStatus"
+  },
+  {
+    label: "Payment Status",
+    data: ["male", "female"],
+    id: "genders"
+  },
+];
+
 
 export interface DataTableInterface {
   tableHeader: string[],
@@ -11,21 +27,38 @@ export interface DataTableInterface {
   showDetailReactNode: ReactNode;
   tableTitle: string;
   showToLeftButton: boolean;
-  test?:boolean;
-  setShowModel?:Function; 
+  setShowModel?: Function;
+  filters?:any;
+  setFilters?:Function;
+  filterData:any;
 }
 
-export default function Febric({setShowModel, tableTitle, tableHeader, tableData, setShowSelectRowId, showDetailReactNode, showToLeftButton, test }: DataTableInterface) {
-  // Loading the febrics for the  users
+export default function DataTable({filterData, filters, setFilters, setShowModel, tableTitle, tableHeader, tableData, setShowSelectRowId, showDetailReactNode, showToLeftButton }: DataTableInterface) {
+
+  // const [filters, setFilters] = React.useState<any>({ orderStatus: [], genders: [] });
+
+  const handleChange = (event: SelectChangeEvent<typeof filters>, name:string) => {
+
+    if(!setFilters) return;
+
+    const {
+      target: { value },
+    } = event;
+
+    setFilters(
+      {...filters, [name]: typeof value === 'string' ? value.split(',') : value}
+
+    );
+  };
+
   const customStyle = {
     cursor: "pointer"
   }
 
-
   const showModelHandler = (i: number) => {
     if (setShowModel === undefined) return;
     return setShowModel(i);
-    
+
   }
 
   if (typeof setShowSelectRowId === "function") {
@@ -34,6 +67,7 @@ export default function Febric({setShowModel, tableTitle, tableHeader, tableData
       return row;
     });
   }
+
 
 
   return (
@@ -45,14 +79,21 @@ export default function Febric({setShowModel, tableTitle, tableHeader, tableData
           <div className={styles.row}>
             <div className={styles.title}>{tableTitle}</div>
             {showToLeftButton && <div className={styles.add__new}>
-              <a href="/product/febric/add"><Button variant="primary" text="Add Febric" /></a>
+              <a href="/product/febric/add"><Button variant="primary" text="Add DataTable" /></a>
             </div>}
           </div>
 
           <div className={styles.row}>
             <div className={styles.table__container}>
               <div className={styles.filters}>
-                <div>Filter Will be shown - will iterate through the setting</div>
+                {filterData && filterData.map((item: any, i: number) => <MultipleSelectWithCheckBox
+                  key={`filter-item-${i}`}
+                  handleChange={(e: any) => handleChange(e, item.id)}
+                  data={item.data}
+                  label={item.label}
+                  value={filters[item.id]}
+                  id={filters.id}
+                />)}
               </div>
               <div className={styles.table}>
                 <BasicTable tableHeader={tableHeader} tableData={tableData} tableRow={tableData[0]} showTableHead />

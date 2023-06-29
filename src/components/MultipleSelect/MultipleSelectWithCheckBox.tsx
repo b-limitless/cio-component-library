@@ -25,13 +25,13 @@ const MenuProps = {
 export interface MultipleSelectCheckmarksInterface  {
     data: string[];
     label: string;
-    setter:Function;
-    getter:string[];
+    value:string[];
     id: string;
     handleChange: any;
+    [x:string]:any;
 }
 
-export default function MultipleSelectCheckmarks({handleChange, data, label, getter, id}: MultipleSelectCheckmarksInterface) {
+export default function MultipleSelectCheckmarks({handleChange, data, label, value, id}: MultipleSelectCheckmarksInterface) {
    
     return (
         <div>
@@ -41,7 +41,7 @@ export default function MultipleSelectCheckmarks({handleChange, data, label, get
                     labelId={id}
                     id={id}
                     multiple
-                    value={getter}
+                    value={value}
                     onChange={handleChange}
                     input={<OutlinedInput label={label} />}
                     renderValue={(selected) => selected.join(', ')}
@@ -49,7 +49,7 @@ export default function MultipleSelectCheckmarks({handleChange, data, label, get
                 >
                     {data.map((name) => (
                         <MenuItem key={name} value={name}>
-                            <Checkbox checked={getter.indexOf(name) > -1} />
+                            <Checkbox checked={value.indexOf(name) > -1} />
                             <ListItemText sx={{...defaultFont}} primary={name} />
                         </MenuItem>
                     ))}

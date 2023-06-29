@@ -47,7 +47,9 @@ const data = [
 //     );
 // };
 
+
 Default1.args = {
+    
     data,
     label: "Filter",
     getter: [], 

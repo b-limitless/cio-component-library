@@ -126,6 +126,23 @@ const showDetailReactNode = "Hello";
 const tableTitle = "Table Title";
 const setShowSelectRowId = function() { return null }
 
+const filterData = [
+  {
+    label: "Order Status",
+    data: ["Hari", "Hurican", "Nighmare", "Skull"],
+    id: "orderStatus"
+  },
+  {
+    label: "Payment Status",
+    data: ["male", "female"],
+    id: "genders"
+  },
+];
+
+const filters:any = { orderStatus: [], genders: [] };
+const setFilters = () => {}
+
+
 Default.args = {
     tableHeader,
     tableData,
@@ -134,8 +151,10 @@ Default.args = {
     showRowDetailsHandler,
     showDetailReactNode,
     tableTitle, 
-    showToLeftButton: true, 
-    test:true, 
-    setShowSelectRowId
+    showToLeftButton: true,  
+    setShowSelectRowId, 
+    filterData, 
+    filters, 
+    setFilters
 }
 
