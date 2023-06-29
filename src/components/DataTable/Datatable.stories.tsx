@@ -141,7 +141,10 @@ const filterData = [
 
 const filters:any = { orderStatus: [], genders: [] };
 const setFilters = () => {}
-
+const paginate = true;
+const  page = 1;
+const setPage = () => {}
+const count = 20;
 
 Default.args = {
     tableHeader,
@@ -155,6 +158,10 @@ Default.args = {
     setShowSelectRowId, 
     filterData, 
     filters, 
-    setFilters
+    setFilters, 
+    paginate,
+    page,
+    setPage,
+    count,
 }
 

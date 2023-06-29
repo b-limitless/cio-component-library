@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from "react";
 import { BasicTable, Button, MultipleSelectWithCheckBox } from "../";
 import styles from "./datatable.module.scss";
 import { SelectChangeEvent } from '@mui/material/Select';
+import PaginationControlled from "../Pagination/Pagination";
 
 
 const filterData = [
@@ -28,25 +29,49 @@ export interface DataTableInterface {
   tableTitle: string;
   showToLeftButton: boolean;
   setShowModel?: Function;
-  filters?:any;
-  setFilters?:Function;
-  filterData:any;
+  filters?: any;
+  setFilters?: Function;
+  filterData: any;
+
+  paginate: boolean,
+  page: number;
+  setPage: Function;
+  count: number;
+
 }
 
-export default function DataTable({filterData, filters, setFilters, setShowModel, tableTitle, tableHeader, tableData, setShowSelectRowId, showDetailReactNode, showToLeftButton }: DataTableInterface) {
+export default function DataTable({
+
+  //  Pagination
+  paginate,
+  page,
+  setPage,
+  count,
+  // Filter
+  filterData,
+  filters,
+  setFilters,
+  //  Models 
+  setShowModel,
+  tableTitle,
+  tableHeader,
+  tableData,
+  setShowSelectRowId,
+  showDetailReactNode,
+  showToLeftButton }: DataTableInterface) {
 
   // const [filters, setFilters] = React.useState<any>({ orderStatus: [], genders: [] });
 
-  const handleChange = (event: SelectChangeEvent<typeof filters>, name:string) => {
+  const handleChange = (event: SelectChangeEvent<typeof filters>, name: string) => {
 
-    if(!setFilters) return;
+    if (!setFilters) return;
 
     const {
       target: { value },
     } = event;
 
     setFilters(
-      {...filters, [name]: typeof value === 'string' ? value.split(',') : value}
+      { ...filters, [name]: typeof value === 'string' ? value.split(',') : value }
 
     );
   };
@@ -99,7 +124,11 @@ export default function DataTable({filterData, filters, setFilters, setShowModel
                 <BasicTable tableHeader={tableHeader} tableData={tableData} tableRow={tableData[0]} showTableHead />
               </div>
               <div className={styles.pagination}>
-                <div>Pagination</div>
+                {paginate && <PaginationControlled
+                  count={count}
+                  page={page}
+                  setPage={setPage}
+                />}
               </div>
             </div>
           </div>
