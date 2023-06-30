@@ -1,6 +1,6 @@
 {
   "name": "@pasal/cio-component-library",
-  "version": "49.0.0",
+  "version": "50.0.0",
   "description": "",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
