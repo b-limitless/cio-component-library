@@ -18,6 +18,9 @@ const filterData = [
   },
 ];
 
+export type keyStrinValue  = {
+  [x:string]: any
+}
 
 export interface DataTableInterface {
   tableHeader: string[],
@@ -27,7 +30,7 @@ export interface DataTableInterface {
   setShowSelectRowId?: Function;
   showDetailReactNode: ReactNode;
   tableTitle: string;
-  showToLeftButton: boolean;
+  showToLeftButton: null | keyStrinValue;
   setShowModel?: Function;
   filters?: any;
   setFilters?: Function;
@@ -104,7 +107,7 @@ export default function DataTable({
           <div className={styles.row}>
             <div className={styles.title}>{tableTitle}</div>
             {showToLeftButton && <div className={styles.add__new}>
-              <a href="/product/febric/add"><Button variant="primary" text="Add DataTable" /></a>
+              <a href={showToLeftButton?.url}><Button variant="primary" text={showToLeftButton.label} /></a>
             </div>}
           </div>
 
