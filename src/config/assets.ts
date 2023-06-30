@@ -18,6 +18,6 @@ export const pngCDNAssetsURIs = {
     search: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687858350/wg9zurieyi1mfymwmont.svg",
     cuff: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687863835/sjrtnqnd7vpd3wbtb6rz.svg",
     collor: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1687863831/wwg63mebce6szzoseoj9.svg",
-    test: "test"
+    eye: "http://res.cloudinary.com/dun5p8e5d/image/upload/v1688138462/ht4muhjvuvt7n2dgipdr.svg"
   };
   
