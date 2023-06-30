@@ -8,6 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { firstLetterUpperCase } from '@pasal/common-functions';
 import { defaultFont } from '../Styles';
+import { camelCaseToNormal } from '../../functions';
 
 export interface BasicTableInterface<T, U> {
     tableData: T[];
@@ -22,7 +23,7 @@ export default function BasicTable<T, R>({ tableData, tableHeader, showTableHead
             <Table aria-label="simple table">
                  <TableHead sx={defaultFont}>
                     {showTableHead && <TableRow sx={defaultFont}>
-                        {tableHeader.map((head: any, i: number) => <TableCell key={`tb-cell-${i}`} sx={defaultFont} align="right">{firstLetterUpperCase(head)}</TableCell>)}
+                        {tableHeader.map((head: any, i: number) => <TableCell key={`tb-cell-${i}`} sx={defaultFont} align="right">{camelCaseToNormal(head, true)}</TableCell>)}
                     </TableRow>}
                 </TableHead>
                 <TableBody>

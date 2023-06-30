@@ -38,11 +38,11 @@ export interface MultipleSelectChipInterface {
     [x:string]:any;
 }
 
-const MultipleSelectChip: React.FC<MultipleSelectChipInterface> = ({options, value, id, label, handleChange }: MultipleSelectChipInterface) => {
+const MultipleSelectChip: React.FC<MultipleSelectChipInterface> = ({options, value, id, label, handleChange, ...rest }: MultipleSelectChipInterface) => {
     const theme = useTheme();
     return (
         <div>
-            <FormControl sx={{ ...style, width: "100%" }}>
+            <FormControl sx={{ ...style, width: "100%" }} size={rest.size ?? "small"} >
                 <InputLabel id="demo-multiple-chip-label">{label}</InputLabel>
                 <Select
                     labelId={id}
