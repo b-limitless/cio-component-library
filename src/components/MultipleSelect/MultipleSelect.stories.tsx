@@ -52,8 +52,7 @@ Default1.args = {
     
     data,
     label: "Filter",
-    getter: [], 
-    setter: function() {}, 
+    value: [],
     id: "hello world", 
     handleChange: function(){}
 }
