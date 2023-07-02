@@ -15,6 +15,7 @@ export {default as Chip} from "./Chip";
 export {default as SideModel} from "./SideModelContainer";
 export {default as SelectWithAvatar} from "./SelectWithAvatar";
 export {default as DatePicker} from "./DatePicker";
+export {default as FormContainer} from "./FormContainer";
 export * from "./Tab";
 export * from "./Input";
 // Exporting types and enums which might need to use
